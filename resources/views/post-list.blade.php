@@ -7,6 +7,7 @@
     <title>Post List</title>
 </head>
 <body>
+  <a href="{{route('post.add')}}"> Add Post</a>
   <table>
     <tr>
        <th>ID</th>
@@ -20,7 +21,10 @@
         <th>{{$post->id}}</th>
         <th>{{$post->name}}</th>
         <th>{{$post->description}}</th>
-       
+        <th>
+          <a href="/edit-post/{{$post->id}}">Edit</a> |
+          <a href="/delete-post/{{$post->id}}">Delete</a>
+        </th>
       </tr>
          
      @endforeach
